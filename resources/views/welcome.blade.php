@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Twill</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,8 +12,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #000;
+                color: #fff;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -48,6 +48,14 @@
                 font-size: 84px;
             }
 
+            .links {
+                position: absolute;
+                bottom: 50px;
+                left: 0;
+                right: 0;
+                text-align: center;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -59,41 +67,40 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 50px;
+            }
+
+            .login-btn {
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                background-color: #333;
+                color: #fff;
+                font-weight: bold;
+                border-radius: 10px;
+                text-decoration: none;
             }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <svg id="icon--logo" width="279" height="114" viewBox="0 0 93 38">
+                        <path fill="currentColor" d="M72 1h9v37h-9zM84 1h9v37h-9z"></path>
+                        <circle fill="currentColor" cx="64.5" cy="5.5" r="5.1"></circle>
+                        <path fill="currentColor" d="M45.924 26.548L39.686 13H34.13l-6.237 13.158L21.898 13H12V6H3v7H0v7h3v18h9V20h3.527l9.344 18h5.994l5.946-13.694L43.049 38h5.896l9.516-18H60v18h9V13H52.21z"></path>
+                    </svg>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <a class="login-btn" href="/admin">Get Started</a>
             </div>
+        </div>
+        <div class="links">
+            <a href="https://twill.io">Twill.io</a>
+            <a href="https://twill.io/docs/">Docs</a>
+            <a href="https://spectrum.chat/twill">Spectrum</a>
+            <a href="https://github.com/area17/twill">Github</a>
+            <a href="https://demo.twill.io/welcome">Demo</a>
         </div>
     </body>
 </html>
