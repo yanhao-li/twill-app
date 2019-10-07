@@ -92,7 +92,7 @@
                         <path fill="currentColor" d="M45.924 26.548L39.686 13H34.13l-6.237 13.158L21.898 13H12V6H3v7H0v7h3v18h9V20h3.527l9.344 18h5.994l5.946-13.694L43.049 38h5.896l9.516-18H60v18h9V13H52.21z"></path>
                     </svg>
                 </div>
-                <a class="login-btn" href="/admin">Get Started</a>
+                <a class="login-btn" href="{{ route('admin.dashboard') }}">Get Started</a>
             </div>
         </div>
         <div class="links">
